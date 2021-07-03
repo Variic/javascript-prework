@@ -1,3 +1,5 @@
+// COMPUTER MOVE
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
@@ -18,11 +20,13 @@ else if(randomNumber == 3){
 
 printMessage('Mój ruch to: ' + computerMove);
 
+// PLAYER MOVE
+
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = 'nieznany ruch';
+let playerMove = 'Nieznany mi ruch!';
 
 if(playerInput == '1'){
   playerMove = 'kamień';
@@ -37,3 +41,58 @@ else if(playerInput == '3'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+// SHOWING THE RESULT
+//draw result
+
+if( computerMove == 'kamień' && playerMove == 'kamień'){
+  printMessage('Mamy remis Zagrajmy jeszcze raz!!');
+}
+
+if( computerMove == 'papier' && playerMove == 'papier'){
+  printMessage('Mamy remis Zagrajmy jeszcze raz!!');
+}
+
+if( computerMove == 'nożyczki' && playerMove == 'nożyczki'){
+  printMessage('Mamy remis! Zagrajmy jeszcze raz!');
+}
+
+//wrong player move
+
+if( computerMove == 'kamień' && playerMove == 'Nieznany mi ruch!'){
+  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
+}
+
+if( computerMove == 'papier' && playerMove == 'Nieznany mi ruch!'){
+  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
+}
+
+if( computerMove == 'nożyczki' && playerMove == 'Nieznany mi ruch!'){
+  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
+}
+
+//other results
+
+if( computerMove == 'kamień' && playerMove == 'nożyczki'){
+  printMessage('Ja wygrywam!');
+}
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+}
+
+if( computerMove == 'papier' && playerMove == 'kamień'){
+  printMessage('Ja wygrywam!');
+}
+
+if( computerMove == 'papier' && playerMove == 'nożyczki'){
+  printMessage('Ty wygrywasz!');
+}
+
+if( computerMove == 'nożyczki' && playerMove == 'papier'){
+  printMessage('Ja wygrywam!');
+}
+
+if( computerMove == 'nożyczki' && playerMove == 'kamień'){
+  printMessage('Ty wygrywasz!');
+}
