@@ -13,13 +13,13 @@ if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
 }
 
 // UNKNOWN PLAY
-if(argComputerMove == 'kamień' && argPlayerMove == 'Nieznany mi ruch!'){
+if(argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
   printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
 }
-if(argComputerMove == 'papier' && argPlayerMove == 'Nieznany mi ruch!'){
+if(argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
   printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
 }
-if(argComputerMove == 'nożyce' && argPlayerMove == 'Nieznany mi ruch!'){
+if(argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
   printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
 }
 
@@ -49,7 +49,7 @@ function getMoveName(argMoveId){
     return 'nożyce';
   }
 
-  printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+  printMessage('Nie znam tego ruchu ' + argMoveId + '.');
   return 'nieznany ruch';
 }
 
