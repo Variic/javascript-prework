@@ -1,4 +1,42 @@
-// COMPUTER MOVE
+function displayResult(argComputerMove, argPlayerMove){
+printMessage('Mój ruch to ' + argComputerMove + ' ,a Twoje zagranie to ' + argPlayerMove);
+
+// DRAW
+if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+  printMessage('Mamy remis Zagrajmy jeszcze raz!!');
+}
+if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
+  printMessage('Mamy remis Zagrajmy jeszcze raz!!');
+}
+if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
+  printMessage('Mamy remis! Zagrajmy jeszcze raz!');
+}
+
+// UNKNOWN PLAY
+if(argComputerMove == 'kamień' && argPlayerMove == 'Nieznany mi ruch!'){
+  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
+}
+if(argComputerMove == 'papier' && argPlayerMove == 'Nieznany mi ruch!'){
+  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
+}
+if(argComputerMove == 'nożyce' && argPlayerMove == 'Nieznany mi ruch!'){
+  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
+}
+
+// OTHER PLAY
+if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+  printMessage('Ja wygrywam!');
+}
+if(argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+  printMessage('Ty wygrywasz!');
+}
+if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+  printMessage('Ja wygrywam!');
+}
+if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+  printMessage('Ty wygrywasz!');
+}
+}
 
 function getMoveName(argMoveId){
   if(argMoveId == 1){
@@ -15,99 +53,24 @@ function getMoveName(argMoveId){
   return 'nieznany ruch';
 }
 
+// COMPUTER MOVE
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-console.log('Wylosowana liczba to: ' + randomNumber);
+let argComputerMove = getMoveName(randomNumber);
 
-let computerMove = getMoveName(randomNumber);
-
-/*if(randomNumber == 1){
-  computerMove = 'kamień';
-}
-
-else if(randomNumber == 2){
-  computerMove = 'papier';
-}
-
-else if(randomNumber == 3){
-  computerMove = 'nożyczki';
-}*/
-
-printMessage('Mój ruch to: ' + computerMove);
 
 // PLAYER MOVE
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-console.log('Gracz wpisał: ' + playerInput);
+let argPlayerMove = getMoveName(playerInput);
 
-let playerMove = getMoveName(playerInput);
 
-/*if(playerInput == '1'){
-  playerMove = 'kamień';
-}
-
-else if(playerInput == '2'){
-  playerMove = 'papier';
-}
-
-else if(playerInput == '3'){
-  playerMove = 'nożyczki';
-}*/
-
-printMessage('Twój ruch to: ' + playerMove);
 
 // SHOWING THE RESULT
-//draw result
 
-if( computerMove == 'kamień' && playerMove == 'kamień'){
-  printMessage('Mamy remis Zagrajmy jeszcze raz!!');
-}
+let gameResult = displayResult(argComputerMove, argPlayerMove);
 
-if( computerMove == 'papier' && playerMove == 'papier'){
-  printMessage('Mamy remis Zagrajmy jeszcze raz!!');
-}
-
-if( computerMove == 'nożyczki' && playerMove == 'nożyczki'){
-  printMessage('Mamy remis! Zagrajmy jeszcze raz!');
-}
-
-//wrong player move
-
-if( computerMove == 'kamień' && playerMove == 'Nieznany mi ruch!'){
-  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
-}
-
-if( computerMove == 'papier' && playerMove == 'Nieznany mi ruch!'){
-  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
-}
-
-if( computerMove == 'nożyczki' && playerMove == 'Nieznany mi ruch!'){
-  printMessage('Wybierz prawidłowy ruch i grajmy dalej!');
-}
-
-//other results
-
-if( computerMove == 'kamień' && playerMove == 'nożyczki'){
-  printMessage('Ja wygrywam!');
-}
-
-if( computerMove == 'kamień' && playerMove == 'papier'){
-  printMessage('Ty wygrywasz!');
-}
-
-if( computerMove == 'papier' && playerMove == 'kamień'){
-  printMessage('Ja wygrywam!');
-}
-
-if( computerMove == 'papier' && playerMove == 'nożyczki'){
-  printMessage('Ty wygrywasz!');
-}
-
-if( computerMove == 'nożyczki' && playerMove == 'papier'){
-  printMessage('Ja wygrywam!');
-}
-
-if( computerMove == 'nożyczki' && playerMove == 'kamień'){
-  printMessage('Ty wygrywasz!');
-}
+console.log('Komputer wybrał liczbe ' + randomNumber + ' /// Gracz wybrał liczbe ' + playerInput);
+console.log('Ruch komputera to  ' + argComputerMove + ' /// Rucha gracza to ' + argPlayerMove);
