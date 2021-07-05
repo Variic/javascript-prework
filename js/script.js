@@ -36,6 +36,12 @@ if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
 if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
   printMessage('Ty wygrywasz!');
 }
+if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+  printMessage('Ja wygrywam!');
+}
+if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+}
 }
 
 function getMoveName(argMoveId){
