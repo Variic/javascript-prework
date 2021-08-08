@@ -4,7 +4,8 @@ const playGame = function(playerInput){
 
 
   const displayResult = function(argComputerMove, argPlayerMove){
-      printMessage('Mój ruch to ' + argComputerMove + ' ,a Twoje zagranie to ' + argPlayerMove);
+      printMessage('Zagranie komputera to: ' + argComputerMove);
+      printMessage('Zagranie gracza to: ' + argPlayerMove);
 
       // DRAW
       if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
@@ -30,22 +31,22 @@ const playGame = function(playerInput){
 
       // OTHER PLAY
       if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-        printMessage('Ja wygrywam!');
+        printMessage('Komputer wygrywa!');
       }
       if(argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-        printMessage('Ty wygrywasz!');
+        printMessage('Gracz wygrywa!');
       }
       if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-        printMessage('Ja wygrywam!');
+        printMessage('Komputer wygrywa!');
       }
       if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-        printMessage('Ty wygrywasz!');
+        printMessage('Gracz wygrywa!');
       }
       if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-        printMessage('Ja wygrywam!');
+        printMessage('Komputer wygrywa!');
       }
       if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-        printMessage('Ty wygrywasz!');
+        printMessage('Gracz wygrywa!');
       }
   }
 
