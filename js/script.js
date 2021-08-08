@@ -1,3 +1,4 @@
+{
 function playGame(playerInput){
 
   clearMessages()
@@ -105,3 +106,4 @@ function buttonScissorsClicked(){
 }
 let testButtonScissors = document.getElementById('play-scissors');
 testButtonScissors.addEventListener('click', buttonScissorsClicked);
+}
