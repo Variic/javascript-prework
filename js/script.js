@@ -1,5 +1,7 @@
 function playGame(playerInput){
 
+  function clearMessages(){}
+
   function displayResult(argComputerMove, argPlayerMove){
   printMessage('Mój ruch to ' + argComputerMove + ' ,a Twoje zagranie to ' + argPlayerMove);
 
@@ -83,5 +85,3 @@ function playGame(playerInput){
   console.log('Komputer wybrał liczbe ' + randomNumber + ' /// Gracz wybrał liczbe ' + playerInput);
   console.log('Ruch komputera to  ' + argComputerMove + ' /// Rucha gracza to ' + argPlayerMove);
 }
-
-playGame(3);
