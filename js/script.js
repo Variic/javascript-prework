@@ -85,3 +85,23 @@ function playGame(playerInput){
   console.log('Komputer wybrał liczbe ' + randomNumber + ' /// Gracz wybrał liczbe ' + playerInput);
   console.log('Ruch komputera to  ' + argComputerMove + ' /// Rucha gracza to ' + argPlayerMove);
 }
+
+// BUTTONS FUNCTIONS
+
+function buttonRockClicked(){
+  playGame(1);
+}
+let testButtonRock = document.getElementById('play-rock');
+testButtonRock.addEventListener('click', buttonRockClicked);
+
+function buttonPaperClicked(){
+  playGame(2);
+}
+let testButtonPaper = document.getElementById('play-paper');
+testButtonPaper.addEventListener('click', buttonPaperClicked);
+
+function buttonScissorsClicked(){
+  playGame(3);
+}
+let testButtonScissors = document.getElementById('play-scissors');
+testButtonScissors.addEventListener('click', buttonScissorsClicked);
