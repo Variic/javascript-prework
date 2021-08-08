@@ -1,6 +1,6 @@
 function playGame(playerInput){
 
-  function clearMessages(){}
+  clearMessages()
 
   function displayResult(argComputerMove, argPlayerMove){
   printMessage('Mój ruch to ' + argComputerMove + ' ,a Twoje zagranie to ' + argPlayerMove);
